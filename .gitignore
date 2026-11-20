@@ -1,0 +1,9 @@
+/*
+!/.gitignore
+!/README.md
+!/LICENSE.md
+!/reports/
+/reports/*
+!/reports/executable-comparison.md
+!/reports/leaderboard-persistence.md
+!/reports/callback-lifetime.md
