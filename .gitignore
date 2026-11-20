@@ -16,3 +16,12 @@
 !/reports/result-delivery.md
 !/reports/statistics-and-persistence.md
 !/reports/async-result-replay.md
+!/reports/initial-binary-survey.md
+!/reports/cross-build-comparison.md
+!/reports/platform-observation.md
+!/reports/behavioral-model-validation.md
+!/reports/static-queue-analysis.md
+!/docs/
+/docs/*
+!/docs/methodology.md
+!/docs/report-index.md
