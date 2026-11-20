@@ -7,3 +7,12 @@
 !/reports/executable-comparison.md
 !/reports/leaderboard-persistence.md
 !/reports/callback-lifetime.md
+!/reports/build-symbols.md
+!/reports/runtime-code-integrity.md
+!/reports/api-call-coverage.md
+!/reports/inventory-and-statistics.md
+!/reports/queue-lifecycle.md
+!/reports/result-retention.md
+!/reports/result-delivery.md
+!/reports/statistics-and-persistence.md
+!/reports/async-result-replay.md
