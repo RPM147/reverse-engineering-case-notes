@@ -20,6 +20,6 @@ The English reports consolidate related findings from the working archive. Phase
 | 21 | [Statistics and persistence](../reports/statistics-and-persistence.md) |
 | 22 | [Leaderboard persistence](../reports/leaderboard-persistence.md) |
 | 23 | [Asynchronous result replay](../reports/async-result-replay.md) |
-| 24 | [Callback lifetime](../reports/callback-lifetime.md) |
+| 24–27 | [Callback lifetime, registration removal and shutdown](../reports/callback-lifetime.md) |
 
 The public collection contains research findings and methodological notes. Working plans, intermediate reviews, and duplicate checkpoints are represented through the report that incorporates their conclusions. The local archive retains raw captures, original-language reports, binary material, and implementation experiments. Public reports omit machine-specific paths, account identifiers, save files, and operational instructions for bypassing access controls.
