@@ -17,3 +17,13 @@ On November 27, 2026, we tested caller-owned storage in a standalone C++ program
 Three scenarios passed on Windows. An idle gate tolerated repeated closure. In the two concurrent scenarios, either the owner or a callback requested closure while two calls were active. A third delivery was rejected. With one call still active, the gate reported that work remained and the listener was alive. After both callbacks completed, the owner destroyed the listener once and another delivery was rejected.
 
 The lifetime guarantee depends on every delivery passing through the gate and on the gate outliving its callers. The test exercised a standalone owner and dispatcher. Whether the game caller provides that coordination remains open.
+
+### What the game recorded at shutdown
+
+We revisited the 482-event game capture from phase 17. Its SHA-256 digest matched the archived capture summary, its sequence numbers were contiguous, and the recorder reported no message truncation. We matched listener addresses across registration, delivery and removal within this run.
+
+The game registered 22 distinct listeners. All 25 recorded delivery entries referred to members of that set. The last recorded delivery entry was event 436. After the exit request at event 456, events 458 through 479 recorded removal of each of the 22 listeners exactly once. Shutdown began at event 480 and returned at event 482.
+
+This establishes the order of registration removal and shutdown in one game run. The trace records entry into the observed listener methods but provides no matching return event for each call. None of the 40 pointer arguments seen at the monitored deallocation helper matched a registered listener address. A listener could be embedded in a larger allocation, and a destructor could run without a corresponding call to that helper. The time of the last listener return and the time of listener destruction therefore remain unknown.
+
+The controlled phase 19 host recorded returns from its own test listeners. The phase 20 game capture retained only part of the session, and the phase 22 game trace followed score persistence. These records add no observation linking a game listener's final return to its destruction.
